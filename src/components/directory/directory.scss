@@ -1,0 +1,13 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.directory__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));    
+    overflow: hidden; 
+
+    @media only screen and (max-width: $bp-very-small) { 
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    } 
+}

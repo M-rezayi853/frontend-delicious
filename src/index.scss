@@ -1,0 +1,29 @@
+@import "./sass/variable.scss";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;   // 1rem = 10px  10px/16px 
+
+    @media only screen and (max-width: $bp-larg) { 
+        font-size: 56.25%;   // 1rem = 9px  9px/16px
+    }
+
+    @media only screen and (max-width: $bp-small) { 
+        font-size: 50%;   // 1rem = 8px  8px/16px   
+    }
+}
+
+body {
+    font-family: $font-primary;
+    font-weight: 300;
+    background-color: #f3f3f3;
+}
+

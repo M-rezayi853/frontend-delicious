@@ -1,0 +1,17 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.userChef {
+    &__img {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50rem;
+    }
+
+    &__details {
+        display: grid;
+        align-items: center;
+    }
+}
+

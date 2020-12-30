@@ -1,0 +1,60 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+@mixin shrinkLabel {
+    top: -.5rem;
+    font-size: 1.2rem;
+    color: $color-primary;
+}
+
+.inputForm {
+    
+    &__list {
+        position: relative;
+        width: 30rem; 
+    } 
+
+    &__input {
+        display: block;
+        border: none; 
+        border-radius: 0; 
+        background: none;  
+        background-color: transparent;
+        border-bottom: .1rem solid #aaa;
+        width: 100%;  
+        margin: 1.5rem 0;
+        padding: .3rem .5rem;
+        color: rgb(130, 130, 130);
+        font-size: 1.6rem;
+
+        &[type="email"] {
+            letter-spacing: .1rem; 
+        }
+
+        &[type="password"] {
+            letter-spacing: .5rem; 
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus ~ .inputForm__label {
+            @include shrinkLabel();
+        }
+    }
+
+    &__label {
+        font-size: 1.5rem; 
+        color: rgb(130, 130, 130);
+        position: absolute;
+        top: 1.5rem;
+        left: .5rem;   
+        transition: all 300ms ease;
+
+        &.shrink {
+            @include shrinkLabel();
+        }
+    }
+}

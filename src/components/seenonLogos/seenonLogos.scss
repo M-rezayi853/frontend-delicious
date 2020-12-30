@@ -1,0 +1,16 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5rem; 
+    justify-items: center;
+    align-items: center;
+
+    img {
+        max-height: 2.5rem;
+        max-width: 100%;
+        filter: brightness(70%);
+    }
+}

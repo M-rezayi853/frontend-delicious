@@ -1,0 +1,9 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.directoryMeal__list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 5vw); 
+}

@@ -1,0 +1,76 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.btn {
+    @extend %heading;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: .3rem;
+    background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .3s;
+    }
+
+    &__visible {
+        padding: 1.1rem 3rem;
+    }
+
+    &__invisible {
+        position: absolute;
+        left: 0;
+        top: -100%;
+        padding: 1.1rem 0;
+    }
+
+    &:hover {
+        // background-image: linear-gradient(to left,#F36, #BA265D);
+        // background-image: linear-gradient(to left,#12368d, #29b1e6);
+        background-image: linear-gradient(to bottom right,#02610a, #1fff2a); 
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%); 
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+        background-image: linear-gradient(to bottom left,#02610a, #1fff2a);
+    }
+
+    &:active {
+        transform: translateY(.1rem); 
+    }
+
+
+    @keyframes pulsate {
+
+        0% {
+            transform: scale(1);
+            box-shadow: none;
+        }
+    
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 1rem 4rem rgba(0,0,0, .25);
+        }
+    
+        100% {
+            transform: scale(1);
+            box-shadow: none;
+        }
+    }
+}

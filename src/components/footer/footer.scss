@@ -1,0 +1,89 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.footer {
+    grid-column: full-start / full-end;
+    background-color: $color-secondary;
+      
+
+    &__nav {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));  
+        margin-bottom: 7rem;    
+        padding: 8rem 5rem 0;  
+
+        @media only screen and (max-width: $bp-small) { 
+            padding: 8rem 8rem 0;
+        }
+
+        @media only screen and (max-width: $bp-very-small) {  
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
+        }
+    } 
+
+    &__item {
+        align-self: center;
+        justify-self: center;
+    }
+
+    &__link {
+        display: block;
+        color: $color-grey-light-1;
+        font-family: $font-display;
+        font-size: 1.3rem;
+        text-decoration: none;
+        padding: 1.3rem;    
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        transform: scale(1);
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small) { 
+            font-size: 1.2rem;    
+        }
+    }
+
+    &__link:hover {
+        transform: scale(1.05);
+        background-color: rgba(#fff, .03); 
+        box-shadow: 0 .1rem .2rem rgba(31, 30, 30, 0.5); 
+    }
+
+    &__link-text {
+        display: inline-block;
+        color: $color-grey-light-1;
+        font-family: $font-primary;
+        font-size: 1.3rem; 
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .2rem;  
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small) { 
+            font-size: 1.2rem;   
+        }
+    }
+
+    &__link-text:hover {
+        transform: translateY(-.5rem);  
+        background-color: rgba(#fff, .05); 
+        box-shadow: 0 1rem 2rem rgba(31, 30, 30, 0.5);    
+        color: springgreen; 
+    }
+
+    &__text {
+        color: #aaa;   
+        font-size: 1.4rem;
+        text-align: center;  
+        width: 75%; 
+        margin: 0 auto; 
+        line-height: 1.7; 
+        padding-bottom: 8rem;  
+
+        @media only screen and (max-width: $bp-small) { 
+            font-size: 1.2rem;   
+            width: 80%;   
+        }
+    }
+}

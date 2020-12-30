@@ -1,0 +1,34 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.sidebar {
+    display: none;
+    background-color: $color-primary;
+
+    @media only screen and (max-width: $bp-medium) { 
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; 
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent; 
+        cursor: pointer;
+        padding: 0 1.5rem;
+        outline: none;
+
+        &:active {
+            background-color: orangered;
+        }
+    }
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        justify-self: end;
+        align-self: center;
+    }
+}

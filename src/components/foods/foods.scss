@@ -1,0 +1,14 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.foods {
+    grid-column: center-start / center-end;
+    padding: 8rem 0 3rem; 
+    display: grid;
+
+    &__heading-2 {
+        justify-self: center; 
+        margin: 0 0 8rem;   
+    } 
+}

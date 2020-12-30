@@ -1,0 +1,49 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.ItemKitchen {
+
+    &__show {
+        filter: brightness(60%); 
+        border-radius: .1rem; 
+        overflow: hidden;  
+        transition: all .5s;
+        width: 100%; 
+        height: 100%; 
+    }
+    
+    &__show:hover {
+        filter: brightness(85%);
+    
+        img {
+            transform: scale(1);
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        height: 100%;
+        transition: all .5s;
+        transform: scale(1.12);
+        overflow: hidden;
+    
+        &:hover {
+            transform: scale(1);
+        }
+    }
+    
+    &__kitchBtn {
+        transform: translateY(-8rem) translateX(0rem); 
+    }
+    
+    &__description {
+        display: flex;
+        justify-content: space-between;
+    
+        span {
+            font-size: 1.4rem; 
+            text-transform: capitalize;
+        }
+    }
+}

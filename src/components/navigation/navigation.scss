@@ -1,0 +1,84 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-very-small) {
+        display: grid;
+        justify-self: center;
+    }
+
+    &__img {
+        height: 5rem;
+        justify-self: start;
+        cursor: pointer;
+    
+        @media only screen and (max-width: $bp-very-small) {
+            justify-items: center;
+        }
+    }
+    
+    &__nav {
+        list-style: none;
+        
+        li {
+            padding: 1rem 2rem;
+            display: inline-block;
+            letter-spacing: .2rem;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $color-grey-light-1;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            outline: none;
+            transition: all .3s;
+            transform: translateY(0);
+            border-bottom: .1rem solid transparent;
+        }
+
+        a:hover {
+            border-bottom: .1rem solid $color-primary;
+            transform: translateY(-0.2rem);
+        }
+
+        a:active {
+            transform: translateY(.1rem);
+        }
+
+        @media only screen and (max-width: $bp-medium) { 
+            display: none;
+        }
+    }
+
+    &__signIn {
+        margin-top: -20rem;
+
+        @media only screen and (max-width: $bp-larg) {
+            margin-top: -25rem;
+        }
+
+        .navigation__img {
+            margin-right: 20rem;
+
+            @media only screen and (max-width: $bp-larg) {
+                margin-right: 10rem;
+            }
+
+            @media only screen and (max-width: $bp-medium) { 
+                display: none;
+            }
+        }
+
+        a {
+            color: rgb(41, 41, 41);
+        }
+    }
+}
+
+
