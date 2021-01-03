@@ -8,6 +8,6 @@
     grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(9, [col-start] minmax(4rem, 11rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; 
 
     @media only screen and (max-width: $bp-medium) { 
-        grid-template-rows: 4rem 50vh min-content;
+        grid-template-rows: 50vh min-content;
     }
 }

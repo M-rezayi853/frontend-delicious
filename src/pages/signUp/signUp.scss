@@ -42,34 +42,13 @@
     display: grid; 
     grid-row-gap: 1rem;
 
-    &__list-checkbox {
-        display: flex;
-        align-items: center;
-    }
-
-    &__checkbox {
-        margin-right: 1rem; 
-    }
-
-    &__label-checkbox {
-        font-size: 1.2rem; 
-        color: rgb(65, 65, 65);  
-    }
-
-    &__btns {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 2rem;
-        width: 100%;
-
-        @media only screen and (max-width: $bp-small) {
-            flex-direction: column;
-        }
-    }
-
     &__btnSimple {
         justify-self: start; 
         font-size: 1.2rem;
-        margin-top: 1.5rem;
+        margin-top: 1.5rem; 
+
+        @media only screen and (max-width: $bp-small) {
+            justify-self: unset; 
+        }
     }
 }

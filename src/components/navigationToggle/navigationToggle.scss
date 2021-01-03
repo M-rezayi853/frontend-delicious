@@ -1,0 +1,56 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.navigationToggle {
+    display: grid;
+    justify-items: center;
+    background-color: rgb(45, 45, 45);
+    // background-color: #101d2c;
+    padding: 2rem 0;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+    
+    &__nav {
+        list-style: none;
+        text-align: center;
+        
+        li {
+            padding: 2rem;
+            display: block;
+            letter-spacing: .2rem;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            // color: rgb(41, 41, 41);
+            color: $color-grey-light-1;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            outline: none;
+            transition: all .3s;
+            transform: translateY(0);
+            border-bottom: .1rem solid transparent;
+            // font-family: $font-display;
+        }
+
+        a:active {
+            transform: translateY(.1rem);
+        }
+    }
+
+    &__icon {
+        padding: 2rem;
+
+        svg {
+            // fill: rgb(41, 41, 41);
+            fill: $color-grey-light-1;
+        }
+
+        span {
+            // color: rgb(41, 41, 41);
+            color: $color-grey-light-1;
+        }
+    }
+}
+
+

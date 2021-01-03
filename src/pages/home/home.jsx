@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Sidebar from '../../components/sidebar/sidebar';
 import Header from '../../components/header/header';
 import Chefs from '../../components/chefs/chefs';
 import Features from '../../components/features/features';
@@ -10,11 +9,12 @@ import Footer from '../../components/footer/footer';
 import './home.scss';
 
 
-const Home = () => {
+const Home = ( { currentUser } ) => {
+    
+
     return (
         <div className="container">
-            <Sidebar />
-            <Header />
+            <Header currentUser={currentUser} />
             <Chefs />
             <Features />
             <Foods />

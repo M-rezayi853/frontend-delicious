@@ -11,7 +11,11 @@
     grid-template-columns: 1fr;
     grid-row-gap: 1rem; 
     align-content: center;
-    justify-items: center; 
+    justify-items: center;
+
+    &.signUpBg {
+        background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.6)), url("../../assets/signUp.jpg");
+    }
 
     @media only screen and (max-width: $bp-medium) {
         grid-column: 1 / -1;
@@ -36,6 +40,10 @@
         align-self: end; 
         margin-top: 1rem; 
         font-size: 1.3rem; 
+        
+        &.unShowBtn {
+            display: none;
+        }
 
         @media only screen and (max-width: $bp-very-small) {
             font-size: 1rem;               

@@ -4,12 +4,16 @@
 .sidebar {
     display: none;
     background-color: $color-primary;
+    width: 100%;
+    height: 4rem;
+    z-index: 100;
+    box-shadow: 0 .5rem 2rem rgba(0,0,0,0.3);
 
     @media only screen and (max-width: $bp-medium) { 
         grid-column: 1 / -1;
         grid-row: 1 / 2;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center; 
     }
 
@@ -30,5 +34,113 @@
         height: 3rem;
         justify-self: end;
         align-self: center;
+        // padding-top: .4rem;
     }
+
+    &__cartIcon {
+        svg {
+            fill: #000;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-top: .5rem;
+        }
+
+        span {
+            color: #000;
+        }
+    }
+
+
+    
+    // &__menuOpened {
+    //     animation: openMenu 1s ease-in-out;
+    // }
+
+    // &__menuClosed {
+    //     animation: closeMenu .5s ease-in;
+    // }
+
+    // @keyframes openMenu {
+    //     0% {
+    //         opacity: 0;
+    //         transform: translateY(-100%);
+    //     }
+
+    //     40% {
+    //         opacity: .4;
+    //     }
+
+    //     80% {
+    //         opacity: .8;
+    //         transform: translateY(-30%);
+    //     }
+
+    //     100% {
+    //         opacity: 1;
+    //         transform: translateY(0);
+    //     }
+    // }
+
+    // @keyframes closeMenu {
+    //     0% {
+    //         opacity: 1;
+    //         transform: translateY(0);
+    //     }
+
+    //     40% {
+    //         opacity: .4;
+    //     }
+
+    //     80% {
+    //         opacity: .8;
+    //     }
+
+    //     100% {
+    //         opacity: 0;
+    //         transform: translateY(-100%);
+    //     }
+    // }
+}
+
+.toggle-enter {
+    opacity: .5;
+    transform: translateY(-70%);
+}
+
+.toggle-enter-active {
+    opacity: .9;
+    transform: translateY(0);
+    transition: opacity .5s, transform .5s;
+}
+
+.toggle-exit {
+    opacity: 1;
+}
+
+.toggle-exit-active {
+    opacity: 1;
+    transform: translateY(-70%);
+    transition: opacity .4s, transform .4s;
+}
+
+
+.rotate-enter{
+    opacity: 0;
+    transform: rotate(0deg);
+}
+.rotate-exit{
+    opacity: 1;
+    transform: rotate(0deg);
+}
+.rotate-enter-active{
+    opacity: 1;
+    transform: rotate(180deg);
+}
+.rotate-exit-active{
+    opacity: 0;
+    transform: rotate(180deg);
+}
+.rotate-enter-active,
+.rotate-exit-active{
+    transition: all .3s;
 }

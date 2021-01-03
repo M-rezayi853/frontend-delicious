@@ -7,10 +7,10 @@ import SeenonLogos from '../seenonLogos/seenonLogos';
 import './header.scss';
 
 
-const Header = ( { history } ) => {
+const Header = ( { history, currentUser } ) => {
     return (
         <header className="header">
-            <Navigation />
+            <Navigation currentUser={currentUser} />
 
             <h3 className="header__heading-3 heading-3 heading-3-light">Your own food:</h3>
             <h1 className="header__heading-1 heading-1">The delicious organic foods</h1>

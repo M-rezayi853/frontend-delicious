@@ -1,26 +1,35 @@
 import React, { useState } from 'react';
 
-import Sidebar from '../../components/sidebar/sidebar';
 import Navigation from '../../components/navigation/navigation';
-import ButtonHover from '../../components/buttonHover/buttonHover';
 import CreateAccount from '../../components/createAccount/createAccount';
 import InputForm from '../../components/inputForm/inputForm';
+import BtnSimple from '../../components/btnSimple/btnSimple';
 import './signIn.scss';
 
+import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
-const SignIn = () => {
+
+const SignIn = ( { currentUser } ) => {
     const [state, setState] = useState({
         email: '',
         password: ''
     });
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
 
-        setState({
-            email: '',
-            password: ''
-        });
+        const { email, password } = state;
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            setState({
+                email: '',
+                password: ''
+            });
+        } catch (error) {
+            console.log(error);
+            alert(error);
+        }
     };
 
     const handleChange = event => {
@@ -31,14 +40,13 @@ const SignIn = () => {
 
     return (
         <div className="body">
-            <Sidebar />
-
             <div className="signInContainer">
                 <CreateAccount />
 
                 <div className="signIn">
                     <Navigation 
-                        nameClass={'navigation__signIn'}
+                        nameClass={'navigation__sign navigation__sign-In'}
+                        currentUser={currentUser}
                     />
                     <h3 className="signIn__heading-3 heading-3-light">Welcome Back!</h3>
 
@@ -62,15 +70,26 @@ const SignIn = () => {
 
                         <div className="form__list-checkbox">
                             <input className="form__checkbox" type="checkbox" id="checkbox" />
-                            <label className="form__label-checkbox" for="checkbox">Stay Signed In</label>
+                            <label className="form__label-checkbox">Stay Signed In</label>
                         </div>
                         
-                        <ButtonHover 
-                            nameClass={'form__btn'}
-                            text1={'sign in'}
-                            text2={'log in'}
-                            type='submit'
-                        />
+                        <div className="form__btns">
+                            <BtnSimple 
+                                nameClass={'form__btnSimple'} 
+                                type='submit'
+                            >
+                                Sign in
+                            </BtnSimple>
+
+                            <BtnSimple 
+                                nameClass={'form__btnSimple'} 
+                                type='button' 
+                                googleColor
+                                onClick={signInWithGoogle}
+                            >
+                                sign in with google
+                            </BtnSimple>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -15,6 +15,7 @@
         height: 5rem;
         justify-self: start;
         cursor: pointer;
+        margin-right: auto;
     
         @media only screen and (max-width: $bp-very-small) {
             justify-items: center;
@@ -34,7 +35,7 @@
             display: block;
             text-decoration: none;
             color: $color-grey-light-1;
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             text-transform: uppercase;
             outline: none;
             transition: all .3s;
@@ -56,13 +57,30 @@
         }
     }
 
-    &__signIn {
-        margin-top: -20rem;
+    &__icon {
+        @media only screen and (max-width: $bp-medium) { 
+            display: none;
+        }
+    }
 
-        @media only screen and (max-width: $bp-larg) {
-            margin-top: -25rem;
+    &__sign {
+
+        &-In {
+            margin-top: -20rem;
+
+            @media only screen and (max-width: $bp-larg) {
+                margin-top: -25rem;
+            }
         }
 
+        &-Up {
+            margin-top: -15rem;
+
+            @media only screen and (max-width: $bp-larg) {
+                margin-top: -20rem;
+            }
+        }
+        
         .navigation__img {
             margin-right: 20rem;
 
@@ -77,6 +95,16 @@
 
         a {
             color: rgb(41, 41, 41);
+        }
+
+        .navigation__icon {
+            svg {
+                fill: rgb(41, 41, 41);
+            }
+
+            span {
+                color: rgb(41, 41, 41);
+            }
         }
     }
 }

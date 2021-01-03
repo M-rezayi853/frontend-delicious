@@ -4,10 +4,10 @@ import Navigation from '../navigation/navigation';
 import './headerKitchen.scss';
 
 
-const HeaderKitchen = () => {
+const HeaderKitchen = ( { currentUser } ) => {
     return (
         <header className="headerKitchen">
-            <Navigation />
+            <Navigation currentUser={currentUser} />
         </header>
     );
 }
