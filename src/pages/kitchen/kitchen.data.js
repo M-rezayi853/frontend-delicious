@@ -173,28 +173,28 @@ const KITCHEN_DATA = [
         routeName: 'kebab',
         items: [
             {
-                id: 1,
+                id: 24,
                 name: 'kebab food 1',
                 imgUrl: './images/kitchen/kebab/kebab-1-min.jpg',  // local file in public/images/kitchen/
                 price: 7.5,
                 alt: 'kebab 1'
             },
             {
-                id: 2,
+                id: 25,
                 name: 'kebab food 2',
                 imgUrl: './images/kitchen/kebab/kebab-2-min.jpg',  // local file in public/images/kitchen/
                 price: 8.4,
                 alt: 'kebab 2'
             },
             {
-                id: 3,
+                id: 26,
                 name: 'kebab food 3',
                 imgUrl: './images/kitchen/kebab/kebab-3-min.jpg',  // local file in public/images/kitchen/
                 price: 7.6,
                 alt: 'kebab 3'
             },
             {
-                id: 4,
+                id: 27,
                 name: 'kebab food 4',
                 imgUrl: './images/kitchen/kebab/kebab-4-min.jpg',  // local file in public/images/kitchen/
                 price: 9.3,
@@ -208,28 +208,28 @@ const KITCHEN_DATA = [
         routeName: 'omelet',
         items: [
             {
-                id: 1,
+                id: 28,
                 name: 'omelet food 1',
                 imgUrl: './images/kitchen/omelet/omelet-1-min.jpg',  // local file in public/images/kitchen/
                 price: 7.5,
                 alt: 'omelet 1'
             },
             {
-                id: 2,
+                id: 29,
                 name: 'omelet food 2',
                 imgUrl: './images/kitchen/omelet/omelet-2-min.jpg',  // local file in public/images/kitchen/
                 price: 8.4,
                 alt: 'omelet 2'
             },
             {
-                id: 3,
+                id: 30,
                 name: 'omelet food 3',
                 imgUrl: './images/kitchen/omelet/omelet-3-min.jpg',  // local file in public/images/kitchen/
                 price: 7.6,
                 alt: 'omelet 3'
             },
             {
-                id: 4,
+                id: 31,
                 name: 'omelet food 4',
                 imgUrl: './images/kitchen/omelet/omelet-4-min.jpg',  // local file in public/images/kitchen/
                 price: 9.3,
@@ -243,28 +243,28 @@ const KITCHEN_DATA = [
         routeName: 'chicken',
         items: [
             {
-                id: 1,
+                id: 32,
                 name: 'chicken food 1',
                 imgUrl: './images/kitchen/chicken/chicken-1-min.jpg',  // local file in public/images/kitchen/
                 price: 7.5,
                 alt: 'chicken 1'
             },
             {
-                id: 2,
+                id: 33,
                 name: 'chicken food 2',
                 imgUrl: './images/kitchen/chicken/chicken-2-min.jpg',  // local file in public/images/kitchen/
                 price: 8.4,
                 alt: 'chicken 2'
             },
             {
-                id: 3,
+                id: 34,
                 name: 'chicken food 3',
                 imgUrl: './images/kitchen/chicken/chicken-3-min.jpg',  // local file in public/images/kitchen/
                 price: 7.6,
                 alt: 'chicken 3'
             },
             {
-                id: 4,
+                id: 35,
                 name: 'chicken food 4',
                 imgUrl: './images/kitchen/chicken/chicken-4-min.jpg',  // local file in public/images/kitchen/
                 price: 9.3,
@@ -278,28 +278,28 @@ const KITCHEN_DATA = [
         routeName: 'pizza',
         items: [
             {
-                id: 1,
+                id: 36,
                 name: 'pizza food 1',
                 imgUrl: './images/kitchen/pizza/pizza-1-min.jpg',  // local file in public/images/kitchen/
                 price: 7.5,
                 alt: 'pizza 1'
             },
             {
-                id: 2,
+                id: 37,
                 name: 'pizza food 2',
                 imgUrl: './images/kitchen/pizza/pizza-2-min.jpg',  // local file in public/images/kitchen/
                 price: 8.4,
                 alt: 'pizza 2'
             },
             {
-                id: 3,
+                id: 38,
                 name: 'pizza food 3',
                 imgUrl: './images/kitchen/pizza/pizza-3-min.jpg',  // local file in public/images/kitchen/
                 price: 7.6,
                 alt: 'pizza 3'
             },
             {
-                id: 4,
+                id: 39,
                 name: 'pizza food 4',
                 imgUrl: './images/kitchen/pizza/pizza-4-min.jpg',  // local file in public/images/kitchen/
                 price: 9.3,
@@ -313,28 +313,28 @@ const KITCHEN_DATA = [
         routeName: 'rice',
         items: [
             {
-                id: 1,
+                id: 40,
                 name: 'rice food 1',
                 imgUrl: './images/kitchen/rice/rice-1-min.jpg',  // local file in public/images/kitchen/
                 price: 7.5,
                 alt: 'rice 1'
             },
             {
-                id: 2,
+                id: 41,
                 name: 'rice food 2',
                 imgUrl: './images/kitchen/rice/rice-2-min.jpg',  // local file in public/images/kitchen/
                 price: 8.4,
                 alt: 'rice 2'
             },
             {
-                id: 3,
+                id: 42,
                 name: 'rice food 3',
                 imgUrl: './images/kitchen/rice/rice-3-min.jpg',  // local file in public/images/kitchen/
                 price: 7.6,
                 alt: 'rice 3'
             },
             {
-                id: 4,
+                id: 43,
                 name: 'rice food 4',
                 imgUrl: './images/kitchen/rice/rice-4-min.jpg',  // local file in public/images/kitchen/
                 price: 9.3,
@@ -348,28 +348,28 @@ const KITCHEN_DATA = [
         routeName: 'steak',
         items: [
             {
-                id: 1,
+                id: 44,
                 name: 'steak food 1',
                 imgUrl: './images/kitchen/steak/steak-1-min.jpg',  // local file in public/images/kitchen/
                 price: 7.5,
                 alt: 'steak 1'
             },
             {
-                id: 2,
+                id: 45,
                 name: 'steak food 2',
                 imgUrl: './images/kitchen/steak/steak-2-min.jpg',  // local file in public/images/kitchen/
                 price: 8.4,
                 alt: 'steak 2'
             },
             {
-                id: 3,
+                id: 46,
                 name: 'steak food 3',
                 imgUrl: './images/kitchen/steak/steak-3-min.jpg',  // local file in public/images/kitchen/
                 price: 7.6,
                 alt: 'steak 3'
             },
             {
-                id: 4,
+                id: 47,
                 name: 'steak food 4',
                 imgUrl: './images/kitchen/steak/steak-4-min.jpg',  // local file in public/images/kitchen/
                 price: 9.3,

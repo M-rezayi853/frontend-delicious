@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import CartIcon from '../cartIcon/cartIcon';
 import './navigationToggle.scss';
+
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import { auth } from '../../firebase/firebase.utils';
 
@@ -26,5 +30,9 @@ const NavigationToggle = ( { match, currentUser } ) => {
     );
 };
 
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser
+});
 
-export default withRouter(NavigationToggle);
+
+export default withRouter(connect(mapStateToProps)(NavigationToggle));

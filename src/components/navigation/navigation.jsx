@@ -1,15 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import logo from '../../assets/logo.png';
 import CartIcon from '../cartIcon/cartIcon';
+import CartDropdown from '../cartDropdown/cartDropdown';
 import './navigation.scss';
+
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { selectHiddenCart } from '../../redux/cart/cart.selectors';
 
 import { auth } from '../../firebase/firebase.utils';
 
 
-const Navigation = ( { nameClass, history, currentUser, match } ) => {
+const Navigation = ( { nameClass, history, match, currentUser, hiddenCart, home, sign } ) => {
     return (
         <nav className={`navigation ${nameClass}`}>
             <img className="navigation__img" onClick={() => history.push('/')} src={logo} alt="logo" />
@@ -25,9 +31,18 @@ const Navigation = ( { nameClass, history, currentUser, match } ) => {
                 }
             </ul>
             <div className="navigation__icon"><CartIcon /></div>
+
+            {
+                hiddenCart ? null : <CartDropdown nameClass={home} nameClass2={sign} />
+            }
         </nav>
     );
-}
+};
+
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hiddenCart: selectHiddenCart
+});
 
 
-export default withRouter(Navigation);
+export default withRouter(connect(mapStateToProps)(Navigation));

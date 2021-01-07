@@ -1,0 +1,34 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.kitchBtn {
+    font-size: 1.5rem;  
+    text-transform: uppercase;
+    color: #fff;
+    background-image: linear-gradient(to bottom left,rgba(18, 55, 141, 0.7), rgba(41, 176, 230, 0.7));    
+    padding: 1.3rem 3rem;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    width: 90%; 
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    transition: all .3s;
+
+    &:hover {
+        cursor: pointer; 
+        background-image: linear-gradient(to bottom left, rgba(250, 47, 98, 0.6), rgba(141, 25, 68, 0.6));
+        // background-image: linear-gradient(to bottom right, rgba($color-primary-light, .7) , rgba($color-primary, .7));
+        // background-image: linear-gradient(to bottom left,#02610aa8, #1fff2a8e);
+    }
+
+    &:active {
+        background-image: linear-gradient(to bottom left,rgba(11, 36, 95, 0.7), rgba(27, 121, 158, 0.7));
+    }
+
+    &.ItemKitchen__kitchBtn {
+        transform: translateY(-8rem) translateX(0rem); 
+    }
+}

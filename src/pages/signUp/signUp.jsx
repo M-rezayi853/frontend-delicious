@@ -57,7 +57,7 @@ const SignUp = ( { currentUser } ) => {
                 <div className="signIn">
                     <Navigation 
                         nameClass={'navigation__sign navigation__sign-Up'}
-                        currentUser={currentUser}
+                        sign="sign"
                     />
                     <h3 className="signIn__heading-3 heading-3-light">Create a Free Account!</h3>
 

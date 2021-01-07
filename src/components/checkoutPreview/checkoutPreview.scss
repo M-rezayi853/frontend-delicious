@@ -1,0 +1,57 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.checkoutPreview {
+    grid-column: center-start / center-end;
+    background-color: $color-grey-light-1;
+    font-size: 1.6rem;
+    color: rgb(97, 97, 97);
+    padding: 8rem 0;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-medium) { 
+        font-size: 1.5rem;
+        padding: 5rem 0;
+    }
+
+    @media only screen and (max-width: $bp-small) { 
+        grid-column: 1 / -1;
+        font-size: 1.2rem;
+        padding: 3rem 0;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        color: $color-primary;
+
+        &::after {
+            content: "";
+            height: .1rem;
+            width: 95%;
+            border-bottom: .1rem solid rgb(160, 160, 160);
+            display: grid;
+            grid-column: 1 / -1;
+            margin-bottom: .9rem;
+        }
+    }
+
+    &__block {
+        padding: 1rem 0;
+    }
+
+    &__total {
+        font-size: 3rem;
+        color: $color-primary;
+        margin-top: 5rem;
+        display: grid;
+        justify-items: center;
+
+        @media only screen and (max-width: $bp-small) { 
+            font-size: 2.5rem;
+            margin-top: 3rem;
+        }
+    }
+}

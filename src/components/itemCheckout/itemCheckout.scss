@@ -1,0 +1,74 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.itemCheckout {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium) { 
+        font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) { 
+        font-size: 1.2rem;
+    }
+
+    &::after {
+        content: "";
+        height: .1rem;
+        width: 95%;
+        border-bottom: .1rem solid rgb(184, 184, 184);
+        display: grid;
+        grid-column: 1 / -1;
+        margin-top: 1.1rem;
+    }
+
+    &__img {
+
+        img {
+            width: 15rem;
+            height: 22rem;
+
+            @media only screen and (max-width: $bp-medium) { 
+                width: 12rem;
+                height: 19rem;
+            }
+
+            @media only screen and (max-width: $bp-small) { 
+                width: 12rem;
+                height: 19rem;
+            }
+
+            @media only screen and (max-width: $bp-very-small) { 
+                width: 8rem;
+                height: 12rem;
+            }
+        }
+    }
+
+    &__name {
+        text-transform: capitalize;
+    }
+
+    &__quantity {
+        display: flex;
+    }
+
+    &__arrow {
+        cursor: pointer;
+    }
+
+    &__value {
+        padding: 0 1rem;
+    }
+
+    &__remove {
+        cursor: pointer;
+    }
+}

@@ -7,12 +7,12 @@ import KITCHEN_DATA from './kitchen.data';
 import './kitchen.scss';
 
 
-const Kitchen = ( { currentUser } ) => {
+const Kitchen = () => {
     const [kitchenSections] = useState(KITCHEN_DATA);
 
     return (
         <div className="pure-container">
-            <HeaderKitchen currentUser={currentUser} />
+            <HeaderKitchen />
 
             <KitchenPreview kitchenSections={kitchenSections} />
 

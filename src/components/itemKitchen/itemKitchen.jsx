@@ -1,22 +1,38 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
+import BtnKitchen from '../btnKitchen/btnKitchen';
 import './itemKitchen.scss';
 
+import { addItem } from '../../redux/cart/cart.actions';
 
-const ItemKitchen = ( { item: { imgUrl, alt, name, price } } ) => {
+
+const ItemKitchen = ( { item, addItem } ) => {
+    const {imgUrl, alt, name, price} = item;
+
     return (
         <div className="ItemKitchen__item">
             <figure className="ItemKitchen__show">
                 <img className="ItemKitchen__img" src={imgUrl} alt={alt} />
-                <button className="ItemKitchen__kitchBtn kitchBtn">add to cart</button>
+                <BtnKitchen 
+                    nameClass="ItemKitchen__kitchBtn"
+                    onClick={() => addItem(item)}
+                >
+                    add to cart
+                </BtnKitchen>
             </figure>
+
             <div className="ItemKitchen__description">
                 <span>{name}</span>
                 <span>${price}</span>
             </div>
         </div>
     );
-}
+};
+
+const mapDispatchToProps = dispatch => ({
+    addItem: (item) => dispatch(addItem(item))
+});
 
 
-export default ItemKitchen;
+export default connect(null, mapDispatchToProps)(ItemKitchen);

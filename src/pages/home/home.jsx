@@ -9,12 +9,12 @@ import Footer from '../../components/footer/footer';
 import './home.scss';
 
 
-const Home = ( { currentUser } ) => {
+const Home = () => {
     
 
     return (
         <div className="container">
-            <Header currentUser={currentUser} />
+            <Header />
             <Chefs />
             <Features />
             <Foods />

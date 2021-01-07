@@ -9,7 +9,7 @@ import './signIn.scss';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 
-const SignIn = ( { currentUser } ) => {
+const SignIn = () => {
     const [state, setState] = useState({
         email: '',
         password: ''
@@ -46,7 +46,7 @@ const SignIn = ( { currentUser } ) => {
                 <div className="signIn">
                     <Navigation 
                         nameClass={'navigation__sign navigation__sign-In'}
-                        currentUser={currentUser}
+                        sign="sign"
                     />
                     <h3 className="signIn__heading-3 heading-3-light">Welcome Back!</h3>
 
