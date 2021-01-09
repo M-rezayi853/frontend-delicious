@@ -1,0 +1,32 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.kitchenCollectionPreview {
+    &__con {
+        margin: 3rem 0;
+    }
+    
+    &__heading-1 {
+        padding: 1rem 0 3rem;
+        transition: all .3s;
+        display: grid;
+        justify-items: center;
+    
+        span {
+            font-size: 1.5rem;
+            background-color: $color-primary-light;
+        }
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));    
+        grid-column-gap: 1rem;
+        grid-row-gap: 5rem;
+    
+        @media only screen and (max-width: $bp-very-small) {
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        }
+    } 
+}

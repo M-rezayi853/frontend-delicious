@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import ItemCheckout from '../itemCheckout/itemCheckout';
+import ButtonStripe from '../buttonStripe/buttonStripe';
 import './checkoutPreview.scss';
 
 import { selectCartItems, selectCartItemsTotal } from '../../redux/cart/cart.selectors';
@@ -43,6 +44,14 @@ const CheckoutPreview = ( { cartItems, cartItemsTotal } ) => {
             <div className="checkoutPreview__total">
                 <span>total:  ${cartItemsTotal.toFixed(2)}</span>
             </div>
+
+            <div className="checkoutPreview__stripe">
+                <h3>*Please use the following test credit card for payments*</h3>
+                <h4>4242 4242 4242 4242 - Exp: 12/22 - CVV: 123</h4>
+
+                <ButtonStripe price={cartItemsTotal} />
+            </div>
+            
         </div>
     );
 };

@@ -54,4 +54,20 @@
             margin-top: 3rem;
         }
     }
+
+    &__stripe {
+        display: grid;
+        justify-items: center;
+        margin: 3rem 0 0;
+
+        h3 {
+            color: red;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            color: green;
+            margin-bottom: 2rem;
+        }
+    }
 }

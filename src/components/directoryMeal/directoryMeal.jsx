@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import ItemMeal from '../itemMeal/itemMeal';
-import DIRECTORY_MEAL_DATA from './directoryMeal.data';
 import './directoryMeal.scss';
 
+import { selectDirectorySectionMeals } from '../../redux/directoryMeal/directoryMeal.selectors';
 
-const DirectoryMeal = () => {
-    const [sectionMeals] = useState(DIRECTORY_MEAL_DATA);
+
+const DirectoryMeal = ( { sectionMeals } ) => {
+    // const [sectionMeals] = useState(DIRECTORY_MEAL_DATA);
     
     return (
         <div className="directoryMeal__list">
@@ -20,7 +23,11 @@ const DirectoryMeal = () => {
             })}
         </div>
     );
-}
+};
+
+const mapStateToProps = createStructuredSelector({
+    sectionMeals: selectDirectorySectionMeals
+});
 
 
-export default DirectoryMeal;
+export default connect(mapStateToProps)(DirectoryMeal);

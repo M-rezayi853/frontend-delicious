@@ -9,6 +9,7 @@ import Kitchen from './pages/kitchen/kitchen';
 import SignIn from './pages/signIn/signIn';
 import SignUp from './pages/signUp/signUp';
 import Checkout from './pages/checkout/checkout';
+import ScrollArrow from './components/scrollArrow/scrollArrow';
 import './App.scss';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -43,6 +44,7 @@ const App = ( { currentUser, setCurrentUser } ) => {
   return (
     <div className="app">
       <Sidebar />
+      <ScrollArrow />
       
       <Switch >
         <Route exact path='/' component={Home} />

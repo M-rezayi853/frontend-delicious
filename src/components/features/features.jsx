@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import ItemFeature from '../itemFeature/itemFeature';
-import FEATURES_DATA from './features.data';
 import './features.scss';
 
+import { selectFeatureSections } from '../../redux/feature/feature.selectors';
 
-const Features = () => {
-    const [featureSections] = useState(FEATURES_DATA);
+
+const Features = ( { featureSections } ) => {
+    // const [featureSections] = useState(FEATURES_DATA);
 
     return (
         <section className="features">
@@ -22,7 +25,11 @@ const Features = () => {
             }
         </section>
     );
-}
+};
+
+const mapStateToProps = createStructuredSelector({
+    featureSections: selectFeatureSections
+});
 
 
-export default Features;
+export default connect(mapStateToProps)(Features);

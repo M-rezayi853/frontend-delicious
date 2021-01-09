@@ -10,7 +10,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;   // 1rem = 10px  10px/16px 
+    font-size: 62.5%;   // 1rem = 10px  10px/16px
 
     @media only screen and (max-width: $bp-larg) { 
         font-size: 56.25%;   // 1rem = 9px  9px/16px
@@ -27,3 +27,7 @@ body {
     background-color: #f3f3f3;
 }
 
+::selection {
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+}
