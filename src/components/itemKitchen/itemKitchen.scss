@@ -3,21 +3,38 @@
 
 
 .ItemKitchen {
+    background-color: $color-grey-light-1;
+    padding: .3rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+    border-radius: .1rem .1rem .5rem .5rem;
+    border: .1rem solid #c0c0c0;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    height: 34rem;
+
+    @media only screen and (max-width: $bp-very-small) {
+        height: 28rem;
+    }
 
     &__show {
-        filter: brightness(60%); 
+        filter: brightness(80%); 
         border-radius: .1rem; 
-        overflow: hidden;  
+        overflow: hidden;
         transition: all .5s;
         width: 100%; 
-        height: 100%; 
+        height: 29rem; 
+
+        @media only screen and (max-width: $bp-very-small) {
+            height: 22rem;
+        }
     }
     
     &__show:hover {
-        filter: brightness(85%);
+        filter: brightness(100%);
     
         img {
-            transform: scale(1);
+            transform: scale(1.02);
         }
     }
     
@@ -25,17 +42,23 @@
         width: 100%;
         height: 100%;
         transition: all .5s;
-        transform: scale(1.12);
+        transform: scale(1);
         overflow: hidden;
     
         &:hover {
-            transform: scale(1);
+            transform: scale(1.02);
         }
     }
     
     &__description {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        justify-items: end;
+        align-items: center;
+        border-radius: .5rem;
+        border: .1rem solid #c0c0c0;
+        margin: .8rem .5rem .5rem;
+        padding: .5rem;
     
         span {
             font-size: 1.4rem; 

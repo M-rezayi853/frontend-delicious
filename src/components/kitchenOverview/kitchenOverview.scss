@@ -6,12 +6,26 @@
 
     &__con {
         margin: 3rem 0;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 2rem 0;
+        }
     }
     
-    &__heading-1 {
+    &__heading-5 {
         cursor: pointer;
-        padding: 1rem 0;
+        padding: 1rem 10rem;
         transition: all .3s;
+        background-color: $color-grey-light-1;
+        margin: 1rem 0;
+        width: max-content;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        border-radius: .5rem;
+        border: .1rem solid #c0c0c0;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: .5rem 5rem;
+        }
     
         span {
             font-size: 1.5rem;
@@ -33,7 +47,7 @@
         grid-row-gap: 3rem; 
     
         @media only screen and (max-width: $bp-very-small) { 
-            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
         } 
     } 
 }

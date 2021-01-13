@@ -16,9 +16,9 @@
         justify-self: start;
         cursor: pointer;
         margin-right: auto;
-    
-        @media only screen and (max-width: $bp-very-small) {
-            justify-items: center;
+
+        @media only screen and (max-width: $bp-medium) { 
+            display: none;
         }
     }
     

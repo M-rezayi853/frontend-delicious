@@ -77,6 +77,43 @@
     }
 }
 
+.heading-5 {
+    @extend %heading;
+    font-size: 4rem;
+    color: $color-grey-light-1;
+
+    &-black {
+        color: #000;
+    }
+}
+
+.heading-6 {
+    @extend %heading;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.4rem;    
+    }
+
+    @media only screen and (max-width: $bp-very-small) {
+        font-size: 1.2rem;    
+    }
+
+    &-red {
+        color: red;
+    }
+
+    &-green {
+        color: green;
+        font-size: 2rem;
+
+        @media only screen and (max-width: $bp-very-small) {
+            font-size: 1.5rem;    
+        }
+    }
+}
+
 .paragraph-1 {
     font-size: 1.8rem;
     color: $color-secondary;

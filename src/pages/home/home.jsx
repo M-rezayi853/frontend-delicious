@@ -10,8 +10,6 @@ import './home.scss';
 
 
 const Home = () => {
-    
-
     return (
         <div className="container">
             <Header />
@@ -21,9 +19,8 @@ const Home = () => {
             <Meals />
             <Footer />
         </div>
-            
     );
-}
+};
 
 
 export default Home;

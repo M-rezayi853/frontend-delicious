@@ -5,13 +5,29 @@
 .kitchenCollectionPreview {
     &__con {
         margin: 3rem 0;
+        // display: grid;
+        justify-items: center;
+        
+        @media only screen and (max-width: $bp-medium) { 
+            margin: 2rem 0;
+        }
     }
     
-    &__heading-1 {
-        padding: 1rem 0 3rem;
+    &__heading-5 {
+        padding: 1rem 10rem;
         transition: all .3s;
         display: grid;
         justify-items: center;
+        background-color: $color-grey-light-1;
+        margin: 2rem 0;
+        // width: max-content;   
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        border-radius: .5rem;
+        border: .1rem solid #c0c0c0;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: .5rem 5rem;
+        }
     
         span {
             font-size: 1.5rem;
@@ -26,7 +42,8 @@
         grid-row-gap: 5rem;
     
         @media only screen and (max-width: $bp-very-small) {
-            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+            grid-row-gap: 2rem;
         }
     } 
 }

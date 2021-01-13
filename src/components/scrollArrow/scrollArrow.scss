@@ -8,25 +8,20 @@
 
     &__con {
         position: fixed;
-        bottom: 2rem;
+        bottom: 4rem;
         right: 2rem;
         background-color: $color-primary;
         padding: 1.5rem;
         cursor: pointer;
-        z-index: 1000;
+        z-index: 200;
         border-radius: 5rem;
         box-shadow: 0 .5rem 1rem rgba(0,0,0,0.3);
         transform: scale(.9git );
         animation: fadeIn 0.3s;
         transition: all .3s;
 
-        @media only screen and (max-width: $bp-medium) {
-            bottom: 1rem;
-            right: 1rem;
-        }
-
         &:hover {
-            background-color: #1fff2a;
+            background-color: $color-green-light;
             transform: scale(1);
 
             .arrow__icon {

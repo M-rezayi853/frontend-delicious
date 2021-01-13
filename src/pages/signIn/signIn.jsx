@@ -39,7 +39,7 @@ const SignIn = () => {
     };
 
     return (
-        <div className="body">
+        <div className="bodySignIn">
             <div className="signInContainer">
                 <CreateAccount />
 
@@ -50,7 +50,7 @@ const SignIn = () => {
                     />
                     <h3 className="signIn__heading-3 heading-3-light">Welcome Back!</h3>
 
-                    <form className="form" onSubmit={handleSubmit}>
+                    <form className="formSignIn" onSubmit={handleSubmit}>
                         <InputForm 
                             name='email'
                             type='email'
@@ -68,21 +68,21 @@ const SignIn = () => {
                             handleChange={handleChange}
                         />
 
-                        <div className="form__list-checkbox">
-                            <input className="form__checkbox" type="checkbox" id="checkbox" />
-                            <label className="form__label-checkbox">Stay Signed In</label>
+                        <div className="formSignIn__list-checkbox">
+                            <input className="formSignIn__checkbox" type="checkbox" id="checkbox" />
+                            <label className="formSignIn__label-checkbox">Stay Signed In</label>
                         </div>
                         
-                        <div className="form__btns">
+                        <div className="formSignIn__btns">
                             <BtnSimple 
-                                nameClass={'form__btnSimple'} 
+                                nameClass={'formSignIn__btnSimple'} 
                                 type='submit'
                             >
                                 Sign in
                             </BtnSimple>
 
                             <BtnSimple 
-                                nameClass={'form__btnSimple'} 
+                                nameClass={'formSignIn__btnSimple'} 
                                 type='button' 
                                 googleColor
                                 onClick={signInWithGoogle}

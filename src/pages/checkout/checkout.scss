@@ -5,9 +5,14 @@
 .checkout-container { 
     display: grid;
     grid-template-rows: 50vh min-content; 
-    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(9, [col-start] minmax(4rem, 11rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; 
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(9, [col-start] minmax(4rem, 11rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+    background-color: #eaeaeb; 
 
     @media only screen and (max-width: $bp-medium) { 
         grid-template-rows: 50vh min-content;
+    }
+
+    @media only screen and (max-width: $bp-very-small) { 
+        grid-template-rows: 25vh min-content;
     }
 }

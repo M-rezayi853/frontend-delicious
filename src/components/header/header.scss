@@ -5,6 +5,7 @@
     background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.7)), url(../../assets/hero.jpg);
     background-position: center;
     background-size: cover;
+    // background-attachment: fixed;
     grid-column: full-start / col-end 8;
     padding: 3rem 5rem;
     padding-top: 1rem;

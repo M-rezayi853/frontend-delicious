@@ -1,6 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { ReactComponent as IconMinus } from '../../assets/icons/New folder/SVG/minus.svg';
+import { ReactComponent as IconPlus } from '../../assets/icons/New folder/SVG/plus.svg';
+import { ReactComponent as IconTrash } from '../../assets/icons/New folder/SVG/trash.svg';
+import { ReactComponent as IconClipboard } from '../../assets/icons/New folder/SVG/clipboard.svg';
+import { ReactComponent as IconShop } from '../../assets/icons/New folder/SVG/shop.svg';
+import { ReactComponent as IconTruck } from '../../assets/icons/New folder/SVG/truck2.svg';
+import { ReactComponent as IconCredit } from '../../assets/icons/New folder/SVG/credit.svg';
 import './itemCheckout.scss';
 
 import { addItem, removeItem, cleanItemFromCart } from '../../redux/cart/cart.actions';
@@ -14,16 +21,40 @@ const ItemCheckout = ( { cartItem, addItem, removeItem, cleanItem } ) => {
     return (
         <div className="itemCheckout">
             <div className="itemCheckout__img">
+                <div className="itemCheckout__quantity">
+                    <div className="itemCheckout__value">
+                        <IconMinus className="itemCheckout__icon" onClick={() => removeItem(cartItem)} />
+                        <span>{quantity}</span>
+                        <IconPlus className="itemCheckout__icon" onClick={() => addItem(cartItem)} />
+                    </div>
+
+                    <IconTrash className="itemCheckout__icon" onClick={() => cleanItem(cartItem)} />
+                </div>
+
                 <img src={imgUrl} alt={alt} />
             </div>
-            <span className="itemCheckout__name">{name}</span>
-            <span className="itemCheckout__quantity">
-                <div className="itemCheckout__arrow" onClick={() => removeItem(cartItem)}>&#10094;</div>
-                <span className="itemCheckout__value">{quantity}</span>
-                <div className="itemCheckout__arrow" onClick={() => addItem(cartItem)}>&#10095;</div>
-            </span>
-            <span className="itemCheckout__price">${prices.toFixed(2)}</span>
-            <div className="itemCheckout__remove" onClick={() => cleanItem(cartItem)}>&#10005;</div>
+            
+            <div className="itemCheckout__description">
+                <h4 className="heading-4">{name}</h4>
+
+                <div className="itemCheckout__text">
+                    <IconClipboard className="itemCheckout__icon-text" />
+                    <span>guarantee of health and organic</span>
+                </div>
+                <div className="itemCheckout__text">
+                    <IconShop className="itemCheckout__icon-text" />
+                    <span>available in delicious kitchen</span>
+                </div>
+                <div className="itemCheckout__text">
+                    <IconTruck className="itemCheckout__icon-text" />
+                    <span>fast supermarket delivery</span>
+                </div>
+            </div>
+
+            <div className="itemCheckout__price">
+                <IconCredit className="itemCheckout__icon-text" />
+                <span>{prices.toFixed(2)}</span>
+            </div>
         </div>
     );
 };

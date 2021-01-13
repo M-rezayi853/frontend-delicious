@@ -2,49 +2,40 @@
 @import "../../sass/typography.scss";
 
 
-.signInContainer { 
+.signUpContainer { 
     background-color: $color-grey-light-1;
-    height: 100vh;
     display: grid;
     grid-template-columns: [center-start] repeat(9, minmax(4rem, 1fr)) [center-end]; 
 
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 40vh 60vh;        
+        grid-template-rows: calc(45vh - 5.5rem) 55vh; 
     }
 }
 
-.signIn {
+.signUp {
     grid-column: 4 / -1;  
     display: grid;
     justify-items: center;
     align-content: center;
-    grid-row-gap: 3rem; 
+    grid-row-gap: 2rem; 
     position: relative;
 
     @media only screen and (max-width: $bp-medium) {
         grid-column: 1 / -1;
         grid-row: 2 / 3;          
     }
-
-    &__img {
-        height: 5rem;
-        justify-self: end;
-        position: absolute;
-        margin-right: 1rem; 
-    }
-
+    
     &__heading-3 {
         font-size: 2.5rem; 
     }
 }
 
-.form {
+.formSignUp {
     display: grid; 
     grid-row-gap: 1rem;
 
     &__btnSimple {
-        justify-self: start; 
-        font-size: 1.2rem;
+        justify-self: start;
         margin-top: 1.5rem; 
 
         @media only screen and (max-width: $bp-small) {

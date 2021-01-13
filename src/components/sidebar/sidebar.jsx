@@ -2,9 +2,11 @@ import React from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { withRouter } from 'react-router-dom';
 
 import { ReactComponent as LogoMenu } from '../../assets/icons/menu11.svg';
 import { ReactComponent as LogoCross } from '../../assets/icons/clear.svg';
+import logoImgBlack from '../../assets/logo-black.png';
 import NavigationToggle from '../navigationToggle/navigationToggle';
 import CartIcon from '../cartIcon/cartIcon';
 import './sidebar.scss';
@@ -18,7 +20,7 @@ const animationTiming = {
     exit: 300
 };
 
-const Sidebar = ( { showMenu, setShowMenu, hideMenu } ) => {
+const Sidebar = ( { showMenu, setShowMenu, hideMenu, history } ) => {
     return (
         <>
             <div className="sidebar">
@@ -43,6 +45,13 @@ const Sidebar = ( { showMenu, setShowMenu, hideMenu } ) => {
                         : <LogoMenu className="sidebar__icon" />
                     } */}
                 </button>
+
+                <img 
+                    className="sidebar__img"
+                    src={logoImgBlack} 
+                    alt="logo black" 
+                    onClick={() => history.push('/')}
+                />
 
                 <div className="sidebar__cartIcon">
                     <CartIcon />
@@ -87,4 +96,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Sidebar));

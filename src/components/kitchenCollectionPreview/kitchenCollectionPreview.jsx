@@ -7,7 +7,7 @@ import './kitchenCollectionPreview.scss';
 const KitchenCollectionPreview = ( { collection: { title, items } } ) => {
     return (
         <div className="kitchenCollectionPreview__con">
-            <h1 className="kitchenCollectionPreview__heading-1 heading-1 heading-1-black">
+            <h1 className="kitchenCollectionPreview__heading-5 heading-5 heading-5-black">
                 {title}
                 <span> foods</span>
             </h1>

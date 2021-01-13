@@ -11,7 +11,7 @@ const ItemKitchen = ( { item, addItem } ) => {
     const {imgUrl, alt, name, price} = item;
 
     return (
-        <div className="ItemKitchen__item">
+        <div className="ItemKitchen">
             <figure className="ItemKitchen__show">
                 <img className="ItemKitchen__img" src={imgUrl} alt={alt} />
                 <BtnKitchen 

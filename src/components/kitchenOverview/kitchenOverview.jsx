@@ -9,7 +9,7 @@ const KitchenOverview = ( { title, routeName, items, history, match } ) => {
     return (
         <div className="kitchenOverview__con">
             <h1 
-                className="kitchenOverview__heading-1 heading-1 heading-1-black"
+                className="kitchenOverview__heading-5 heading-5 heading-5-black"
                 onClick={() => history.push(`${match.path}/${routeName}`)}
             >
                 {title}

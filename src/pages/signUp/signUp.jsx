@@ -50,18 +50,18 @@ const SignUp = ( { currentUser } ) => {
     };
 
     return (
-        <div className="body">
-            <div className="signInContainer">
+        <div className="bodySignUp">
+            <div className="signUpContainer">
                 <CreateAccount unShowBtn signUpBg />
 
-                <div className="signIn">
+                <div className="signUp">
                     <Navigation 
                         nameClass={'navigation__sign navigation__sign-Up'}
                         sign="sign"
                     />
                     <h3 className="signIn__heading-3 heading-3-light">Create a Free Account!</h3>
 
-                    <form className="form" onSubmit={handleSubmit}>
+                    <form className="formSignUp" onSubmit={handleSubmit}>
                         <InputForm 
                             name='displayName'
                             type='text'
@@ -95,7 +95,7 @@ const SignUp = ( { currentUser } ) => {
                         />
 
                         <BtnSimple
-                            nameClass={'form__btnSimple'}
+                            nameClass={'formSignUp__btnSimple'}
                             type='submit'
                         >
                             Sign up
