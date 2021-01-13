@@ -3,11 +3,11 @@
 
 .meals {
     grid-column: full-start / full-end;
-    margin: 8rem 0 0;
+    margin: 4rem 0 0;
     display: grid;
 
     @media only screen and (max-width: $bp-small) {
-        margin: 4rem 0 0;
+        margin: 1.5rem 0 0;
     }
 
     &__heading-2 {

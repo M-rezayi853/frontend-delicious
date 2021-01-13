@@ -4,18 +4,22 @@
 
 .signInContainer { 
     background-color: $color-grey-light-1;
-    // height: 100vh;
+    height: 100vh;
+
     display: grid;
-    grid-template-columns: [center-start] repeat(9, minmax(4rem, 1fr)) [center-end]; 
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(9, [col-start] minmax(4rem, 11rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+    grid-template-rows: repeat(4, 25vh);
 
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: calc(45vh - 5.5rem) 55vh;
+        grid-template-rows: calc(45vh - 5.5rem) 70vh;
     }
 }
 
 .signIn {
-    grid-column: 4 / -1;  
+    grid-column: 5 / -1; 
+    grid-row: 1 / -1;
     display: grid;
+    grid-template-rows: 25vh 5vh 35vh 30vh;
     justify-items: center;
     align-content: center;
     grid-row-gap: 3rem; 
@@ -24,6 +28,7 @@
     @media only screen and (max-width: $bp-medium) {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
+        grid-template-rows: 30vh 40vh 30vh;
     }
 
     &__img {
@@ -34,12 +39,13 @@
     }
 
     &__heading-3 {
-        font-size: 2.5rem; 
+        font-size: 2.5rem;
+        align-self: end;
     }
 }
 
 .formSignIn {
-    display: grid; 
+    display: grid;
     grid-row-gap: 1rem;
 
     &__list-checkbox {
