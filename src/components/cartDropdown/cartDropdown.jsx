@@ -11,9 +11,13 @@ import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { setHiddenCart } from '../../redux/cart/cart.actions';
 
 
-const CartDropdown = ( { cartItems, nameClass, nameClass2, history, setHiddenCart } ) => {
+const CartDropdown = ( { cartItems, history, setHiddenCart, location } ) => {
     return (
-        <div className={`cartDropdown ${nameClass} ${nameClass2}`}>
+        <div className={`cartDropdown 
+            ${location.pathname === '/' && 'cartDropdown__home'}
+            ${location.pathname === '/signin' && 'cartDropdown__sign'}
+            ${location.pathname === '/signup' && 'cartDropdown__sign'}
+        `}>
             <div className="cartDropdown__items">
                 {
                     cartItems.length ? 

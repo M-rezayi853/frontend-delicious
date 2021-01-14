@@ -6,10 +6,14 @@
     justify-content: space-between;
     align-items: center;
 
-    @media only screen and (max-width: $bp-very-small) {
-        display: grid;
-        justify-self: center;
+    @media only screen and (max-width: $bp-medium) { 
+        display: none;
     }
+
+    // @media only screen and (max-width: $bp-very-small) {
+    //     display: grid;
+    //     justify-self: center;
+    // }
 
     &__img {
         height: 5rem;
@@ -17,13 +21,17 @@
         cursor: pointer;
         margin-right: auto;
 
-        @media only screen and (max-width: $bp-medium) { 
-            display: none;
-        }
+        // @media only screen and (max-width: $bp-medium) { 
+        //     display: none;
+        // }
     }
     
     &__nav {
         list-style: none;
+
+        // @media only screen and (max-width: $bp-medium) { 
+        //     display: none;
+        // }
         
         li {
             padding: 1rem 2rem;
@@ -51,10 +59,6 @@
         a:active {
             transform: translateY(.1rem);
         }
-
-        @media only screen and (max-width: $bp-medium) { 
-            display: none;
-        }
     }
 
     &__icon {
@@ -65,38 +69,6 @@
 
     &__sign {
         width: 90%;
-
-        @media only screen and (max-width: $bp-medium) { 
-            display: none;
-        }
-
-        // &-In {
-        //     margin-top: -20rem;
-
-        //     @media only screen and (max-width: $bp-larg) {
-        //         margin-top: -25rem;
-        //     }
-        // }
-
-        // &-Up {
-        //     margin-top: -15rem;
-
-        //     @media only screen and (max-width: $bp-larg) {
-        //         margin-top: -20rem;
-        //     }
-        // }
-        
-        // .navigation__img {
-        //     margin-right: 20rem;
-
-        //     @media only screen and (max-width: $bp-larg) {
-        //         margin-right: 10rem;
-        //     }
-
-        //     @media only screen and (max-width: $bp-medium) { 
-        //         display: none;
-        //     }
-        // }
 
         a {
             color: rgb(41, 41, 41);

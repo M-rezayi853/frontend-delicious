@@ -45,8 +45,7 @@ const SignIn = () => {
 
                 <div className="signIn">
                     <Navigation 
-                        nameClass={'navigation__sign navigation__sign-In'}
-                        sign="sign"
+                        nameClass={'navigation__sign'}
                     />
                     <h3 className="signIn__heading-3 heading-3-light">Welcome Back!</h3>
 

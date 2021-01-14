@@ -176,7 +176,7 @@ const KITCHEN_DATA = {
                 id: '1b',
                 name: 'kebab food 1',
                 imgUrl: '/images/kitchen/kebab/kebab-1-min.jpg',  // local file in public/images/kitchen/
-                price: 9.0,
+                price: 9.6,
                 alt: 'kebab 1'
             },
             {
@@ -332,6 +332,13 @@ const KITCHEN_DATA = {
                 imgUrl: '/images/kitchen/kebab/kebab-23-min.jpg',  // local file in public/images/kitchen/
                 price: 11.7,
                 alt: 'kebab 23'
+            },
+            {
+                id: '24b',
+                name: 'kebab food 24',
+                imgUrl: '/images/kitchen/kebab/kebab-24-min.jpg',  // local file in public/images/kitchen/
+                price: 9.0,
+                alt: 'kebab 24'
             }
         ]
     },

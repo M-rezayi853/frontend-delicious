@@ -6,16 +6,14 @@ import { createStructuredSelector } from 'reselect';
 
 import logo from '../../assets/logo.png';
 import CartIcon from '../cartIcon/cartIcon';
-import CartDropdown from '../cartDropdown/cartDropdown';
 import './navigation.scss';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
-import { selectHiddenCart } from '../../redux/cart/cart.selectors';
 
 import { auth } from '../../firebase/firebase.utils';
 
 
-const Navigation = ( { nameClass, history, match, currentUser, hiddenCart, home, sign } ) => {
+const Navigation = ( { nameClass, history, match, currentUser } ) => {
     return (
         <nav className={`navigation ${nameClass}`}>
             <img className="navigation__img" onClick={() => history.push('/')} src={logo} alt="logo" />
@@ -31,17 +29,12 @@ const Navigation = ( { nameClass, history, match, currentUser, hiddenCart, home,
                 }
             </ul>
             <div className="navigation__icon"><CartIcon /></div>
-
-            {
-                hiddenCart ? null : <CartDropdown nameClass={home} nameClass2={sign} />
-            }
         </nav>
     );
 };
 
 const mapStateToProps = createStructuredSelector({
-    currentUser: selectCurrentUser,
-    hiddenCart: selectHiddenCart
+    currentUser: selectCurrentUser
 });
 
 

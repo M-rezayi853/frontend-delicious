@@ -9,9 +9,11 @@ import { ReactComponent as LogoCross } from '../../assets/icons/clear.svg';
 import logoImgBlack from '../../assets/logo-black.png';
 import NavigationToggle from '../navigationToggle/navigationToggle';
 import CartIcon from '../cartIcon/cartIcon';
+import CartDropdown from '../cartDropdown/cartDropdown';
 import './sidebar.scss';
 
 import { selectShowMenu } from '../../redux/menu/menu.selectors';
+import { selectHiddenCart } from '../../redux/cart/cart.selectors';
 import { setShowMenu, hideMenu } from '../../redux/menu/menu.actions';
 
 
@@ -20,7 +22,7 @@ const animationTiming = {
     exit: 300
 };
 
-const Sidebar = ( { showMenu, setShowMenu, hideMenu, history } ) => {
+const Sidebar = ( { showMenu, setShowMenu, hideMenu, history, hiddenCart } ) => {
     return (
         <>
             <div className="sidebar">
@@ -82,12 +84,17 @@ const Sidebar = ( { showMenu, setShowMenu, hideMenu, history } ) => {
                 <NavigationToggle currentUser={currentUser} />
                 </div> : null
             } */}
+
+            {
+                hiddenCart ? null : <CartDropdown />
+            }
         </>
     );
 };
 
 const mapStateToProps = createStructuredSelector({
-    showMenu: selectShowMenu
+    showMenu: selectShowMenu,
+    hiddenCart: selectHiddenCart
 });
 
 const mapDispatchToProps = dispatch => ({

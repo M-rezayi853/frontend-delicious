@@ -10,7 +10,7 @@ import './header.scss';
 const Header = ( { history } ) => {
     return (
         <header className="header">
-            <Navigation home="home" />
+            <Navigation />
 
             <h3 className="header__heading-3 heading-3 heading-3-light">Your own food:</h3>
             <h1 className="header__heading-1 heading-1">The delicious organic foods</h1>
