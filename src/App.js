@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -14,16 +14,19 @@ import './App.scss';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { setCurrentUser } from './redux/user/user.actions';
+// import { selectKitchenCollectionsForPreview } from './redux/kitchen/kitchen.selectors';
 
+// import { auth, createUserProfileDoc, addCollectionAndDocs } from './firebase/firebase.utils';
 import { auth, createUserProfileDoc } from './firebase/firebase.utils';
 
 
+// const App = ( { currentUser, setCurrentUser, kitchenCollectionArray } ) => {
 const App = ( { currentUser, setCurrentUser } ) => {
-  // const [currentUser, setCurrentUser] = useState(null);
-  // const [showMenu, setShowMenu] = useState(false);
+
+  let unsubscribeFormAuth = useRef(null);
 
   useEffect(() => {
-    const unsubscribeFormAuth = auth.onAuthStateChanged(async userAuth => {
+    unsubscribeFormAuth.current = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDoc(userAuth);
 
@@ -35,10 +38,12 @@ const App = ( { currentUser, setCurrentUser } ) => {
         })
       }
       setCurrentUser(userAuth);
+      // addCollectionAndDocs('collections', kitchenCollectionArray.map(({ title, items }) => ({ title, items })));
 
       return () => unsubscribeFormAuth;
     });
-  }, [setCurrentUser]);
+  // }, [setCurrentUser, kitchenCollectionArray]);
+}, [setCurrentUser]);
 
 
   return (
@@ -58,7 +63,8 @@ const App = ( { currentUser, setCurrentUser } ) => {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  // kitchenCollectionArray: selectKitchenCollectionsForPreview
 });
 
 const mapDispatchToProps = dispatch => ({

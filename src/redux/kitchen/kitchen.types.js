@@ -1,0 +1,3 @@
+export const KitchenActionTypes = {
+    UPDATE_KITCHEN_COLLECTIONS: 'UPDATE_KITCHEN_COLLECTIONS'
+};
