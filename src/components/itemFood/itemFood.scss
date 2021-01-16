@@ -71,7 +71,8 @@
 
     &__text {
         text-transform: uppercase; 
-        display: inline-block;
+        display: block;
+        width: max-content;
         font-weight: 400;
         letter-spacing: .5rem;
         color: #fff;

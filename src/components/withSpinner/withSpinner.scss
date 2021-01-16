@@ -1,0 +1,44 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.withSpinner {
+    &__overlay {
+        height: 60vh;
+        width: 100vw;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+
+    &__container {
+        display: inline-block;
+        width: 5rem;
+        height: 5rem;
+        border: .3rem solid rgba(195, 195, 195, 0.6);
+        border-radius: 50rem;
+        // border-top-color: #636767;
+        // border-top-color: #11b9b9;
+        border-top-color: $color-primary;
+        // border-top-color: $color-green-light;
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        // to {
+        //     transform: rotate(360deg);
+        //     -webkit-transform: rotate(360deg);
+        // }
+
+        0% {
+            transform: rotate(0);
+            -webkit-transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+        }
+    }
+}

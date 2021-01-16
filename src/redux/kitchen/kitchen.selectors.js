@@ -17,3 +17,13 @@ export const selectKitchenCollectionsUrl = collectionUrlParam => createSelector(
     [selectKitchenCollections],
     collections => collections ? collections[collectionUrlParam] : null
 );
+
+export const selectIsCollectionFetching = createSelector(
+    [selectKitchen],
+    kitchen => kitchen.isFetching 
+);
+
+export const selectIsCollectionLoaded = createSelector(
+    [selectKitchen],
+    kitchen => !!kitchen.collections
+);
