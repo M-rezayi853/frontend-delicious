@@ -1,27 +1,31 @@
 import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
+// import { createStructuredSelector } from 'reselect';
 
 import HeaderKitchen from '../../components/headerKitchen/headerKitchen';
 import Footer from '../../components/footer/footer';
-import KitchenPreview from '../../components/kitchenPreview/kitchenPreview';
-import KitchenCollection from '../kitchenCollection/kitchenCollection';
-import WithSpinner from '../../components/withSpinner/withSpinner';
+// import KitchenPreview from '../../components/kitchenPreview/kitchenPreview';
+import KitchenPreviewContainer from '../../components/kitchenPreview/kitchenPreview.container';
+// import KitchenCollection from '../kitchenCollection/kitchenCollection';
+import kitchenCollectionContainer from '../kitchenCollection/kitchenCollection.container';
+// import WithSpinner from '../../components/withSpinner/withSpinner';
 import './kitchen.scss';
 
 // import { updateKitchenCollections } from '../../redux/kitchen/kitchen.actions';
 // import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase.utils';
 
-import { selectIsCollectionFetching, selectIsCollectionLoaded } from '../../redux/kitchen/kitchen.selectors';
+// import { selectIsCollectionFetching, selectIsCollectionLoaded } from '../../redux/kitchen/kitchen.selectors';
 import { fetchCollectionsStartAsync } from '../../redux/kitchen/kitchen.actions';
 
 
-const KitchenPreviewSpinner = WithSpinner(KitchenPreview);
-const KitchenCollectionSpinner = WithSpinner(KitchenCollection);
+// const KitchenPreviewSpinner = WithSpinner(KitchenPreview);
+// const KitchenCollectionSpinner = WithSpinner(KitchenCollection);
+
 
 // const Kitchen = ( { match, updateKitchenCollections } ) => {
-const Kitchen = ( { match, fetchStartAsync, isFetching, isLoaded } ) => {
+// const Kitchen = ( { match, fetchStartAsync, isFetching, isLoaded } ) => {
+const Kitchen = ( { match, fetchStartAsync } ) => {
     // const [isLoading, setIsLoading] = useState(true);
 
     // let unsubscribeFormSnapshot = useRef(null);
@@ -54,21 +58,26 @@ const Kitchen = ( { match, fetchStartAsync, isFetching, isLoaded } ) => {
             <Route 
                 exact 
                 path={`${match.path}`} 
-                render={(props) => <KitchenPreviewSpinner isLoading={isFetching} {...props} />} />
+                // render={(props) => <KitchenPreviewSpinner isLoading={isFetching} {...props} />} 
+                component={KitchenPreviewContainer}
+            />
+
             {/* <Route path={`${match.path}/:kitchenCollectionId`} component={KitchenCollection} /> */}
             <Route 
                 path={`${match.path}/:kitchenCollectionId`} 
-                render={(props) => <KitchenCollectionSpinner isLoading={!isLoaded} {...props} />} />
+                // render={(props) => <KitchenCollectionSpinner isLoading={!isLoaded} {...props} />} 
+                component={kitchenCollectionContainer}
+            />
 
             <Footer />
         </div>
     );
 };
 
-const mapStateToProps = createStructuredSelector({
-    isFetching: selectIsCollectionFetching,
-    isLoaded: selectIsCollectionLoaded
-});
+// const mapStateToProps = createStructuredSelector({
+//     isFetching: selectIsCollectionFetching,
+//     isLoaded: selectIsCollectionLoaded
+// });
 
 const mapDispatchToProps = dispatch => ({
     // updateKitchenCollections: (collectionsMap) => dispatch(updateKitchenCollections(collectionsMap))
@@ -76,4 +85,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Kitchen);
+// export default connect(mapStateToProps, mapDispatchToProps)(Kitchen);
+export default connect(null, mapDispatchToProps)(Kitchen);

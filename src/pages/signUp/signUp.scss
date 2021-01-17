@@ -30,6 +30,10 @@
         grid-row: 2 / -1;
         grid-template-rows: 20vh 50vh 20vh;  
     }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 20vh 40vh 20vh;  
+    }
     
     &__heading-3 {
         font-size: 2.5rem; 
