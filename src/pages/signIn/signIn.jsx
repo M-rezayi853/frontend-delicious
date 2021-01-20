@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
 import Navigation from '../../components/navigation/navigation';
 import CreateAccount from '../../components/createAccount/createAccount';
@@ -6,10 +7,11 @@ import InputForm from '../../components/inputForm/inputForm';
 import BtnSimple from '../../components/btnSimple/btnSimple';
 import './signIn.scss';
 
-import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+// import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+import { signInGoogleStart, signInEmailStart } from '../../redux/user/user.actions';
 
 
-const SignIn = () => {
+const SignIn = ( { signInGoogleStart, signInEmailStart } ) => {
     const [state, setState] = useState({
         email: '',
         password: ''
@@ -20,16 +22,18 @@ const SignIn = () => {
 
         const { email, password } = state;
 
-        try {
-            await auth.signInWithEmailAndPassword(email, password);
-            setState({
-                email: '',
-                password: ''
-            });
-        } catch (error) {
-            console.log(error);
-            alert(error);
-        }
+        // try {
+        //     await auth.signInWithEmailAndPassword(email, password);
+        //     setState({
+        //         email: '',
+        //         password: ''
+        //     });
+        // } catch (error) {
+        //     console.log(error);
+        //     alert(error);
+        // }
+
+        signInEmailStart(email, password);
     };
 
     const handleChange = event => {
@@ -84,7 +88,8 @@ const SignIn = () => {
                                 nameClass={'formSignIn__btnSimple'} 
                                 type='button' 
                                 googleColor
-                                onClick={signInWithGoogle}
+                                // onClick={signInWithGoogle}
+                                onClick={signInGoogleStart}
                             >
                                 sign in with google
                             </BtnSimple>
@@ -94,7 +99,12 @@ const SignIn = () => {
             </div>
         </div>
     );
-}
+};
+
+const mapDispatchToProps = dispatch => ({
+    signInGoogleStart: () => dispatch(signInGoogleStart()),
+    signInEmailStart: (email, password) => dispatch(signInEmailStart( { email, password } ))
+});
 
 
-export default SignIn;
+export default connect(null, mapDispatchToProps)(SignIn);

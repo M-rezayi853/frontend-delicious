@@ -7,11 +7,12 @@ import CartIcon from '../cartIcon/cartIcon';
 import './navigationToggle.scss';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { signOutStart } from '../../redux/user/user.actions';
 
-import { auth } from '../../firebase/firebase.utils';
+// import { auth } from '../../firebase/firebase.utils';
 
 
-const NavigationToggle = ( { match, currentUser } ) => {
+const NavigationToggle = ( { location, currentUser, signOutStart } ) => {
     return (
         <nav className="navigationToggle">
 
@@ -21,7 +22,7 @@ const NavigationToggle = ( { match, currentUser } ) => {
                 <li><Link to="/aboutme">about me</Link></li>
                 {
                     currentUser ? 
-                    <li onClick={() => auth.signOut()}><Link to={`${match.url}`}>sign out</Link></li>
+                    <li onClick={() => signOutStart()}><Link to={`${location.pathname}`}>sign out</Link></li>
                     : <li><Link to="/signin">sign in</Link></li>
                 }
             </ul>
@@ -34,5 +35,9 @@ const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser
 });
 
+const mapDispatchToProps = dispatch => ({
+    signOutStart: () => dispatch(signOutStart())
+});
 
-export default withRouter(connect(mapStateToProps)(NavigationToggle));
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavigationToggle));

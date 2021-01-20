@@ -16,7 +16,8 @@ import './kitchen.scss';
 // import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase.utils';
 
 // import { selectIsCollectionFetching, selectIsCollectionLoaded } from '../../redux/kitchen/kitchen.selectors';
-import { fetchCollectionsStartAsync } from '../../redux/kitchen/kitchen.actions';
+// import { fetchCollectionsStartAsync } from '../../redux/kitchen/kitchen.actions';
+import { fetchCollectionsStart } from '../../redux/kitchen/kitchen.actions';
 
 
 // const KitchenPreviewSpinner = WithSpinner(KitchenPreview);
@@ -25,7 +26,8 @@ import { fetchCollectionsStartAsync } from '../../redux/kitchen/kitchen.actions'
 
 // const Kitchen = ( { match, updateKitchenCollections } ) => {
 // const Kitchen = ( { match, fetchStartAsync, isFetching, isLoaded } ) => {
-const Kitchen = ( { match, fetchStartAsync } ) => {
+// const Kitchen = ( { match, fetchStartAsync } ) => {
+const Kitchen = ( { match, fetchCollectionsStart } ) => {
     // const [isLoading, setIsLoading] = useState(true);
 
     // let unsubscribeFormSnapshot = useRef(null);
@@ -46,8 +48,11 @@ const Kitchen = ( { match, fetchStartAsync } ) => {
 
     
     useEffect(() => {
-        fetchStartAsync();
-    }, [fetchStartAsync]);
+        // fetchStartAsync();
+        fetchCollectionsStart();
+        
+    // }, [fetchStartAsync]);
+    }, [fetchCollectionsStart]);
 
 
     return (
@@ -81,7 +86,8 @@ const Kitchen = ( { match, fetchStartAsync } ) => {
 
 const mapDispatchToProps = dispatch => ({
     // updateKitchenCollections: (collectionsMap) => dispatch(updateKitchenCollections(collectionsMap))
-    fetchStartAsync: () => dispatch(fetchCollectionsStartAsync())
+    // fetchStartAsync: () => dispatch(fetchCollectionsStartAsync())
+    fetchCollectionsStart: () => dispatch(fetchCollectionsStart())
 });
 
 

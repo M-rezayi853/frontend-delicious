@@ -26,13 +26,13 @@ const FEATURE_DATA = [
     {
         id: 5,
         title: 'Top 1% chefs',
-        describe: 'Inexpensive, healthy and great-tasting meals, Good for your health delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood.',
+        describe: 'Inexpensive, healthy and great-tasting meals, Good for your health delivered right to my home. We have lots of food delivery here in Isfahan, but no one comes even close to delicious food.',
         icon: 'price-ribbon'
     },
     {
         id: 6,
         title: 'Secure payments with us',
-        describe: 'It is looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!',
+        describe: 'It is looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with delicious food. Best food delivery service in the Bay Area. Keep up the great work!',
         icon: 'shop'
     },
 ];

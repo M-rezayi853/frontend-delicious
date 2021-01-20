@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+// import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -13,37 +14,45 @@ import ScrollArrow from './components/scrollArrow/scrollArrow';
 import './App.scss';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
-import { setCurrentUser } from './redux/user/user.actions';
+// import { setCurrentUser } from './redux/user/user.actions';
 // import { selectKitchenCollectionsForPreview } from './redux/kitchen/kitchen.selectors';
 
 // import { auth, createUserProfileDoc, addCollectionAndDocs } from './firebase/firebase.utils';
-import { auth, createUserProfileDoc } from './firebase/firebase.utils';
+// import { auth, createUserProfileDoc } from './firebase/firebase.utils';
+
+import { checkUserSession } from './redux/user/user.actions';
 
 
 // const App = ( { currentUser, setCurrentUser, kitchenCollectionArray } ) => {
-const App = ( { currentUser, setCurrentUser } ) => {
+// const App = ( { currentUser, setCurrentUser, checkUserSession } ) => {
+const App = ( { currentUser, checkUserSession } ) => {
 
-  let unsubscribeFormAuth = useRef(null);
+  // let unsubscribeFormAuth = useRef(null);
+
+  // useEffect(() => {
+  //   unsubscribeFormAuth.current = auth.onAuthStateChanged(async userAuth => {
+  //     if (userAuth) {
+  //       const userRef = await createUserProfileDoc(userAuth);
+
+  //       userRef.onSnapshot(snapShot => {
+  //         setCurrentUser({
+  //           id: snapShot.id,
+  //           ...snapShot.data()
+  //         })
+  //       })
+  //     }
+  //     setCurrentUser(userAuth);
+  //     // addCollectionAndDocs('collections', kitchenCollectionArray.map(({ title, items }) => ({ title, items })));
+
+  //     return () => unsubscribeFormAuth;
+  //   });
+  // // }, [setCurrentUser, kitchenCollectionArray]);
+  // }, [setCurrentUser]);
+
 
   useEffect(() => {
-    unsubscribeFormAuth.current = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDoc(userAuth);
-
-        userRef.onSnapshot(snapShot => {
-          setCurrentUser({
-            id: snapShot.id,
-            ...snapShot.data()
-          })
-        })
-      }
-      setCurrentUser(userAuth);
-      // addCollectionAndDocs('collections', kitchenCollectionArray.map(({ title, items }) => ({ title, items })));
-
-      return () => unsubscribeFormAuth;
-    });
-  // }, [setCurrentUser, kitchenCollectionArray]);
-}, [setCurrentUser]);
+    checkUserSession();
+  }, [checkUserSession]);
 
 
   return (
@@ -68,7 +77,8 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = dispatch => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user))
+  // setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+  checkUserSession: () => dispatch(checkUserSession())
 });
 
 
