@@ -1,5 +1,5 @@
 import { KitchenActionTypes } from './kitchen.types';
-import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase.utils';
+// import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase.utils';
 
 
 export const fetchCollectionsStart = () => ({

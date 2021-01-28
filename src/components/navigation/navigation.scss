@@ -84,6 +84,22 @@
             }
         }
     }
+
+    &__error {
+        a {
+            color: rgb(41, 41, 41);
+        }
+
+        .navigation__icon {
+            svg {
+                fill: rgb(41, 41, 41);
+            }
+
+            span {
+                color: rgb(41, 41, 41);
+            }
+        }
+    }
 }
 
 
