@@ -8,10 +8,6 @@
     box-sizing: inherit;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 html {
     box-sizing: border-box;
     font-size: 62.5%;   // 1rem = 10px  10px/16px
@@ -29,8 +25,6 @@ body {
     font-family: $font-primary;
     font-weight: 300;
     background-color: #f3f3f3;
-    position: relative;
-    display: grid;
 }
 
 ::selection {
