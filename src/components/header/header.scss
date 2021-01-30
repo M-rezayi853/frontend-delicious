@@ -18,7 +18,8 @@
     }
 
     @media only screen and (max-width: $bp-small) { 
-        grid-column: full-start / full-end;   
+        grid-column: full-start / full-end;
+        background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.7)), url(../../assets/hero-mobile.jpg);
     }
 
     &__heading-1 {
