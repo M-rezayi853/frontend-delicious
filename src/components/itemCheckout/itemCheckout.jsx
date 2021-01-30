@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { ReactComponent as IconMinus } from '../../assets/icons/New folder/SVG/minus.svg';
-import { ReactComponent as IconPlus } from '../../assets/icons/New folder/SVG/plus.svg';
-import { ReactComponent as IconTrash } from '../../assets/icons/New folder/SVG/trash.svg';
-import { ReactComponent as IconClipboard } from '../../assets/icons/New folder/SVG/clipboard.svg';
-import { ReactComponent as IconShop } from '../../assets/icons/New folder/SVG/shop.svg';
-import { ReactComponent as IconTruck } from '../../assets/icons/New folder/SVG/truck2.svg';
-import { ReactComponent as IconCredit } from '../../assets/icons/New folder/SVG/credit.svg';
+import { ReactComponent as IconMinus } from '../../assets/icons/minus.svg';
+import { ReactComponent as IconPlus } from '../../assets/icons/plus.svg';
+import { ReactComponent as IconTrash } from '../../assets/icons/trash.svg';
+import { ReactComponent as IconClipboard } from '../../assets/icons/clipboard.svg';
+import { ReactComponent as IconShop } from '../../assets/icons/shop.svg';
+import { ReactComponent as IconTruck } from '../../assets/icons/truck2.svg';
+import { ReactComponent as IconCredit } from '../../assets/icons/credit.svg';
 import './itemCheckout.scss';
 
 import { addItem, removeItem, cleanItemFromCart } from '../../redux/cart/cart.actions';
