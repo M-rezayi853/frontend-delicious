@@ -1,0 +1,117 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.btnSocial {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding-bottom: .2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.3);
+    transition: all .3s;
+    
+    &.instagram {
+        background-color: #c91d56;
+        border-bottom: .5rem solid #ac0f44;
+    }
+
+    &.telegram {
+        background-color: #269bd0;
+        border-bottom: .5rem solid #147baa;
+    }
+
+    &.github {
+        background-color: #444444;
+        border-bottom: .5rem solid #353535;
+    }
+
+    &:hover.instagram {
+        background-color: #ac0f44;
+        border-bottom: .5rem solid #850d35;
+
+        .btnSocial__icon.instagram {
+            border-right: .2rem solid #850d35;
+        }
+    }
+
+    &:hover.telegram {
+        background-color: #1885b8;
+        border-bottom: .5rem solid #0d597c;
+
+        .btnSocial__icon.telegram {
+            border-right: .2rem solid #0d597c;
+        }
+    }
+
+    &:hover.github {
+        background-color: #333333;
+        border-bottom: .5rem solid #272727;
+
+        .btnSocial__icon.github {
+            border-right: .2rem solid #272727;
+        }
+    }
+
+    &__icon {
+        padding-right: .5rem;
+        transition: all .3s;
+        
+        &.instagram {
+            border-right: .2rem solid #ac0f44;
+        }
+
+        &.telegram {
+            border-right: .2rem solid #147baa;
+        }
+
+        &.github {
+            border-right: .2rem solid #353535;
+        }
+    }
+
+    &__svg {
+        fill: #fff;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &__btn {
+        border: none;
+        color: #fff;
+        background-color: transparent;
+        width: 15rem;
+        cursor: pointer;
+        outline: none;
+        font-family: $font-social;
+        letter-spacing: .2rem;
+        text-transform: capitalize;
+    }
+}
+
+// .row button.facebook span {
+//   border-right: 1px solid #2e4476;
+// }
+// .row button.twitter span {
+//   border-right: 1px solid #269bd0;
+// }
+// .row button.instagram span {
+//   border-right: 1px solid #c91d56;
+// }
+// .row button.youtube span {
+//   border-right: 1px solid #c02b21;
+// }
+// .row button.facebook:active span {
+//   box-shadow: 0px 5px 0px 0px #2e4476, 6px 4px 2px rgba(0, 0, 0, 0.3);
+// }
+// .row button.twitter:active span {
+//   box-shadow: 0px 5px 0px 0px #269bd0, 6px 4px 2px rgba(0, 0, 0, 0.3);
+// }
+// .row button.instagram:active span {
+//   box-shadow: 0px 5px 0px 0px #c91d56, 6px 4px 2px rgba(0, 0, 0, 0.3);
+// }
+// .row button.youtube:active span {
+//   box-shadow: 0px 5px 0px 0px #c02b21, 6px 4px 2px rgba(0, 0, 0, 0.3);
+// }

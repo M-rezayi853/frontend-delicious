@@ -114,6 +114,41 @@
     }
 }
 
+.heading-7 {
+    font-family: $font-social;
+    font-weight: 400;
+    font-size: 3.3rem;
+    color: rgb(56, 55, 55);
+    text-transform: uppercase;
+    margin-top: 2rem;
+} 
+
+.heading-8 {
+    font-family: $font-social;
+    font-weight: 400;
+    font-size: 2.7rem;
+    color: rgb(43, 42, 42);
+    text-transform: uppercase;
+} 
+
+.heading-9 {
+    // @extend %heading;
+    font-family: $font-social;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: rgb(61, 61, 61);
+    text-transform: uppercase;
+}
+
+.heading-10 {
+    // @extend %heading;
+    font-family: $font-social;
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: $color-primary;
+    text-transform: uppercase;
+} 
+
 .paragraph-1 {
     font-size: 1.8rem;
     color: $color-secondary;

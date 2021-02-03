@@ -30,6 +30,7 @@ const Kitchen = lazy(() => import('./pages/kitchen/kitchen'));
 const SignIn = lazy(() => import('./pages/signIn/signIn'));
 const SignUp = lazy(() => import('./pages/signUp/signUp'));
 const Checkout = lazy(() => import('./pages/checkout/checkout'));
+const Aboutme = lazy(() => import('./pages/aboutme/aboutme'));
 
 
 // const App = ( { currentUser, setCurrentUser, kitchenCollectionArray } ) => {
@@ -77,6 +78,7 @@ const App = ( { currentUser, checkUserSession } ) => {
             <Route exact path='/signin' component={() => currentUser ? <Redirect to='/' /> : <SignIn />} />
             <Route exact path='/signup' component={() => currentUser ? <Redirect to='/' /> : <SignUp />} />
             <Route exact path='/checkout' component={Checkout} />
+            <Route exact path='/aboutme' component={Aboutme} />
           </Suspense>
         </ErrorBoundary>
       </Switch>

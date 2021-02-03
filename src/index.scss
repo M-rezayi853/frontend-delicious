@@ -17,11 +17,11 @@ html {
     }
 
     @media only screen and (max-width: $bp-small) {
-        font-size: 50%;   // 1rem = 8px  8px/16px   
+        font-size: 50%;   // 1rem = 8px  8px/16px
     }
 
     @media only screen and (max-width: $bp-very-small) { 
-        font-size: 48%;   // 1rem = 7.8px  7.8px/16px   
+        font-size: 48%;   // 1rem = 7.8px  7.8px/16px
     }
 
     @media only screen and (max-width: $bp-thin) { 
@@ -29,7 +29,7 @@ html {
     }
 
     @media only screen and (max-width: $bp-very-thin) { 
-        font-size: 37.5%;   // 1rem = 6px  6px/16px   
+        font-size: 37.5%;   // 1rem = 6px  6px/16px
     }
 }
 

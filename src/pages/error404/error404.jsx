@@ -13,13 +13,12 @@ const Error404 = () => {
             />
             
             <div className="error__imagOverlay">
-                <div 
-                    style={{backgroundImage: 'url(https://i.imgur.com/DWO5Hzg.png)'}}
-                    className="error__imageContainer"  
-                />
+                <div className="error__imageContainer" />
                 <h2 className="error__imageText">
                     Sorry this page is broken!
                 </h2>
+                <h2 className="error__text">turn on your <span>vpn</span> if you live in iran :(((</h2>
+                <h2>XD</h2>
             </div>
 
             <Footer />

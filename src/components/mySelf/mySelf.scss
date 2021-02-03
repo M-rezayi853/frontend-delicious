@@ -1,0 +1,123 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+
+.mySelf {
+    margin: 8rem 0 3rem;
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-column-gap: 2rem;
+
+    @media only screen and (max-width: $bp-very-small) { 
+        grid-column: 1 / -1;
+        padding: .5rem 2rem;
+        margin: 3rem 0 1rem;
+    }
+
+    &__imgSelf {
+        justify-self: center;
+        align-self: center;
+
+        @media only screen and (max-width: $bp-very-small) { 
+            grid-column: 1 / -1;
+        }
+
+        img {
+            width: 37rem;
+            height: 37rem;
+            border-radius: 100%;
+            border: .1rem solid rgb(160, 160, 160);
+            box-shadow: 0 .7rem 1rem rgba(0,0,0,0.2);
+
+            @media only screen and (max-width: $bp-medium) { 
+                width: 30rem;
+                height: 30rem;
+            }
+
+            @media only screen and (max-width: $bp-small) { 
+                width: 25rem;
+                height: 25rem;
+            }
+
+            @media only screen and (max-width: $bp-very-small) { 
+                width: 35rem;
+                height: 35rem;
+            }
+        }
+    }
+
+    &__details {
+        display: grid;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-very-small) { 
+            grid-column: 1 / -1;
+        }
+
+        h1, h2, h3 {
+            margin-left: 5%;
+        }
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        margin: 1.5rem 0;
+        justify-items: center;
+    }
+
+    &__image {
+        justify-self: center;
+
+        img {
+            width: 17rem;
+            height: 17rem;
+            border-radius: 100%;
+            border: .1rem solid rgb(160, 160, 160);
+            box-shadow: 0 .7rem 1rem rgba(0,0,0,0.2);
+
+            @media only screen and (max-width: $bp-medium) { 
+                width: 13rem;
+                height: 13rem;
+            }
+
+            @media only screen and (max-width: $bp-small) { 
+                width: 10rem;
+                height: 10rem;
+            }
+
+            @media only screen and (max-width: $bp-very-small) { 
+                width: 13rem;
+                height: 13rem;
+            }
+
+            @media only screen and (max-width: $bp-thin) { 
+                width: 11rem;
+                height: 11rem;
+            }
+        }
+    }
+
+    &__text {
+        display: grid;
+        justify-items: center;
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+        text-transform: lowercase;
+        font-style: italic;
+
+        @media only screen and (max-width: $bp-small) { 
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        span {
+            // background-color: $color-grey-light-1;
+            box-shadow: 0 .7rem 1rem rgba(0,0,0,0.2);
+            border-radius: .2rem;
+            padding: .2rem .5rem;
+        }
+    }
+}
