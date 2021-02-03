@@ -66,6 +66,10 @@
         grid-gap: 2rem;
         margin: 1.5rem 0;
         justify-items: center;
+
+        @media only screen and (max-width: $bp-very-small) { 
+            grid-gap: 1rem;
+        }
     }
 
     &__image {
@@ -89,13 +93,13 @@
             }
 
             @media only screen and (max-width: $bp-very-small) { 
-                width: 13rem;
-                height: 13rem;
+                width: 10rem;
+                height: 10rem;
             }
 
             @media only screen and (max-width: $bp-thin) { 
-                width: 11rem;
-                height: 11rem;
+                width: 9rem;
+                height: 9rem;
             }
         }
     }
