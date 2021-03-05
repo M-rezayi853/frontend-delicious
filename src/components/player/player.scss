@@ -1,0 +1,30 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.player {
+
+    button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            .player__icon {
+                fill: $color-primary;
+            }
+        }
+
+        &:focus {
+            .player__icon {
+                fill: $color-primary;
+            }
+        }
+    }
+
+    &__icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        fill: rgb(126, 126, 126);
+        transition: all .3s;
+    }
+}

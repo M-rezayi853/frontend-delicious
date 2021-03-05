@@ -1,0 +1,54 @@
+@import "../../sass/variable.scss";
+@import "../../sass/typography.scss";
+
+.mySelfInsta {
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-template-columns: 1fr 1fr;
+    margin: 5rem 0;
+
+    @media only screen and (max-width: $bp-very-small) { 
+        grid-column: 1 / -1;
+        padding: .5rem 2rem;
+        margin: 2rem 0;
+    }
+
+    &__favText {
+        font-style: italic;
+
+        @media only screen and (max-width: $bp-very-small) { 
+            grid-column: 1 / -1;
+            margin: 2rem 0;
+            display: grid;
+            justify-items: center;
+        }
+    }
+    
+    &__songs {
+        font-style: italic;
+
+        @media only screen and (max-width: $bp-very-small) { 
+            grid-column: 1 / -1;
+            margin: 2rem 0;
+            display: grid;
+            justify-items: center;
+        }
+    }
+
+    &__song {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+        margin: 1rem 0;
+
+        @media only screen and (max-width: $bp-very-small) { 
+            justify-items: center;
+        }
+    }
+
+    &__player {
+        display: grid;
+        justify-items: center;
+    }
+}
+
