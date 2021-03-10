@@ -23,9 +23,11 @@
     }
 
     &__icon {
-        width: 3.5rem;
-        height: 3.5rem;
-        fill: rgb(155, 155, 155);
+        width: 4rem;
+        height: 4rem;
+        fill: rgb(73, 139, 165);
         transition: all .3s;
+        border-radius: 50rem;
+        box-shadow: 0 .7rem 1rem rgba(0,0,0,0.2);
     }
 }
